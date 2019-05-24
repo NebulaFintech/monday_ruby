@@ -1,10 +1,12 @@
 require 'monday_ruby/version'
 require 'monday_ruby/mixins/all'
 require 'monday_ruby/mixins/find'
+require 'monday_ruby/mixins/create'
 require 'monday_ruby/requestor'
 require 'monday_ruby/resource'
 require 'monday_ruby/board'
 require 'monday_ruby/user'
+require 'monday_ruby/column'
 require 'monday_ruby/utils'
 
 module MondayRuby

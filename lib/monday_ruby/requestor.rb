@@ -22,8 +22,8 @@ module MondayRuby
       set_headers_for(connection)
       response = connection.method(http_method).call do |request|
         request.url self.class.join_url(api_base, resource_url + '.json')
-        set_api_key(request)
         set_request_params(request, params) if params.present?
+        set_api_key(request)
       end
       JSON.parse(response.body)
     end
@@ -40,12 +40,8 @@ module MondayRuby
     end
 
     def set_request_params(request, params)
-      case request.method
-      when :post, :put
-        request.body = params.to_json
-      when :get
-        request.params = params
-      end
+      # Nasty monday's handling params
+      request.params = params
     end
   end
 end

@@ -2,17 +2,39 @@ module MondayRuby
   class Board < Resource
     include Mixins::Find
     include Mixins::All
+    include Mixins::Create
 
-    attr_reader :name, :description, :columns,
+    attr_accessor :name, :description, :columns,
                 :board_kind, :groups
 
-    def initialize(args)
+    def initialize(args = {})
+      args         = args.with_indifferent_access
       @name        = args['name']
-      @description = args['description']
-      @columns     = args['columns']
-      @board_kind  = args['board_kind']
-      @groups      = args['groups']
+      @description = args.fetch('description', '')
+      @columns     = args.fetch('columns', [])
+      @board_kind  = args.fetch('board_kind', 'public')
+      @groups      = args.fetch('groups', [])
       super(args)
+    end
+
+    def columns=(columns)
+      if columns.select{ |c| c.is_a?(MondayRuby::Column) }.present?
+        @columns = columns
+      elsif columns.select{ |c| c.is_a?(Hash) }.present?
+        @columns = columns.map{ |c| MondayRuby::Column.new(c) }
+      else
+        raise ArgumentError, 'Invalid columns types. Valid types are MondayRuby::Column or hash'
+      end
+    end
+
+    def to_hash
+      super.to_hash.merge({
+        name: name,
+        description: description,
+        columns: columns.map(&:to_hash),
+        board_kind: board_kind,
+        groups: groups.map(&:to_hash),
+      })
     end
   end
 end

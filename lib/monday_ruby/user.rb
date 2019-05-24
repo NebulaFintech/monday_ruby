@@ -8,7 +8,8 @@ module MondayRuby
                 :location, :status, :birthday,
                 :is_guest
 
-    def initialize(args)
+    def initialize(args = {})
+      args        = args.with_indifferent_access
       @name       = args['name']
       @email      = args['email']
       @photo_url  = args['photo_url']

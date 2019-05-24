@@ -16,4 +16,12 @@ RSpec.describe MondayRuby::Board do
     expect(boards.count).to be > 1
     expect(boards.first).to be_a(MondayRuby::Board)
   end
+
+  it 'creates a board' do
+    board = MondayRuby::Board.new
+    board.name = 'Cool Board!'
+    board.description = 'Board created with MondayRuby'
+    board.columns = [{ title: 'name', type: 'name' }, { title: 'Responsable', type: 'person' }]
+    board.create(user_id: configuration['user_id'] || 123)
+  end
 end
