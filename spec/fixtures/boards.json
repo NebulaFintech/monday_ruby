@@ -1,0 +1,646 @@
+[{
+  "url": "https://gonebula.monday.com/boards/214947414",
+  "id": 214947414,
+  "name": "Tareas diarias",
+  "description": "En este tablero se muestran las tareas de desarrollo espont\u00e1neas que se pueden ir apilando si no se atienden diariamente.",
+  "columns": [{
+    "id": "name",
+    "title": "Name",
+    "type": "name",
+    "width": 523.005682
+  }, {
+    "type": "tag",
+    "title": "Tags",
+    "id": "tags"
+  }, {
+    "type": "person",
+    "title": "Solicitante",
+    "id": "person3"
+  }, {
+    "title": "Encargado",
+    "type": "person",
+    "id": "person"
+  }, {
+    "title": "Estatus",
+    "type": "color",
+    "labels": {
+      "0": "Trabajando",
+      "1": "Terminado",
+      "2": "Atorado",
+      "3": "Pendiente"
+    },
+    "id": "status",
+    "labels_positions_v2": {
+      "0": 1,
+      "1": 3,
+      "2": 2,
+      "3": 0,
+      "5": 4
+    }
+  }, {
+    "type": "date",
+    "title": "Fecha de entrega",
+    "id": "date4"
+  }],
+  "board_kind": "public",
+  "groups": [{
+    "title": "Comercial",
+    "color": "#fdab3d",
+    "id": "new_group40",
+    "board_id": 214947414
+  }, {
+    "title": "Bugs",
+    "color": "#0086c0",
+    "id": "bugs",
+    "deleted": true,
+    "archived": false,
+    "board_id": 214947414
+  }, {
+    "title": "IT",
+    "id": "topics",
+    "color": "#579bfc",
+    "board_id": 214947414
+  }, {
+    "title": "Group Title",
+    "color": "#a25ddc",
+    "id": "group_title",
+    "deleted": true,
+    "archived": false,
+    "board_id": 214947414
+  }],
+  "created_at": "2019-04-11T14:47:28Z",
+  "updated_at": "2019-05-22T22:07:11Z"
+}, {
+  "url": "https://gonebula.monday.com/boards/215003390",
+  "id": 215003390,
+  "name": "An\u00e1lisis de datos",
+  "description": "",
+  "columns": [{
+    "id": "name",
+    "title": "Name",
+    "type": "name",
+    "width": 327
+  }, {
+    "title": "Encargado",
+    "type": "person",
+    "id": "person"
+  }, {
+    "title": "Estatus",
+    "type": "color",
+    "labels": {
+      "0": "Trabajando",
+      "1": "Terminado",
+      "2": "Atorado"
+    },
+    "id": "status",
+    "labels_positions": {
+      "0": 0,
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 5,
+      "5": 10,
+      "6": 6,
+      "7": 4,
+      "8": 7,
+      "9": 8,
+      "10": 9
+    },
+    "labels_positions_v2": {
+      "0": 0,
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 5,
+      "5": 10,
+      "6": 6,
+      "7": 4,
+      "8": 7,
+      "9": 8,
+      "10": 9
+    }
+  }, {
+    "title": "Duraci\u00f3n",
+    "type": "timerange",
+    "id": "timeline"
+  }, {
+    "type": "dependency",
+    "title": "Dependencia",
+    "id": "dependency"
+  }],
+  "board_kind": "public",
+  "groups": [{
+    "title": "IT",
+    "id": "topics",
+    "color": "#a25ddc",
+    "board_id": 215003390
+  }, {
+    "title": "Data",
+    "color": "#037f4c",
+    "id": "data",
+    "board_id": 215003390
+  }, {
+    "title": "R\u0026D",
+    "color": "#00c875",
+    "id": "q2",
+    "deleted": true,
+    "archived": false,
+    "board_id": 215003390
+  }, {
+    "title": "Marketing",
+    "color": "#579bfc",
+    "id": "backlog",
+    "deleted": true,
+    "archived": false,
+    "board_id": 215003390
+  }],
+  "created_at": "2019-04-11T15:47:46Z",
+  "updated_at": "2019-05-08T22:27:25Z"
+}, {
+  "url": "https://gonebula.monday.com/boards/215803009",
+  "id": 215803009,
+  "name": "Bur\u00f3 de Cr\u00e9dito",
+  "description": null,
+  "columns": [{
+    "id": "name",
+    "title": "Name",
+    "type": "name",
+    "width": 433
+  }, {
+    "title": "Creator",
+    "type": "person",
+    "id": "person",
+    "width": 94
+  }, {
+    "type": "person",
+    "title": "Owner",
+    "id": "person3",
+    "width": 99
+  }, {
+    "title": "Status",
+    "type": "color",
+    "labels": {
+      "0": "Working on it",
+      "1": "Done",
+      "2": "Stuck",
+      "3": "",
+      "5": "",
+      "7": "Pending",
+      "9": "Stand-by"
+    },
+    "id": "status",
+    "labels_positions_v2": {
+      "0": 0,
+      "1": 2,
+      "2": 1,
+      "3": 5,
+      "5": 3,
+      "7": 6,
+      "9": 4
+    },
+    "width": 135
+  }, {
+    "type": "date",
+    "title": "Expected completion",
+    "id": "date4"
+  }],
+  "board_kind": "public",
+  "groups": [{
+    "title": "Consultas de informaci\u00f3n crediticia",
+    "color": "#00c875",
+    "id": "new_group",
+    "board_id": 215803009
+  }, {
+    "title": "Duplicate of Consultas de informaci\u00f3n crediticia",
+    "color": "#00c875",
+    "id": "duplicate_of_consultas_de_info",
+    "board_id": 215803009
+  }, {
+    "title": "Bases de datos",
+    "id": "topics",
+    "color": "#579bfc",
+    "board_id": 215803009
+  }, {
+    "title": "Group Title",
+    "color": "#a25ddc",
+    "id": "group_title",
+    "deleted": true,
+    "archived": false,
+    "board_id": 215803009
+  }],
+  "created_at": "2019-04-12T21:46:51Z",
+  "updated_at": "2019-05-16T18:16:01Z"
+}, {
+  "url": "https://gonebula.monday.com/boards/221181870",
+  "id": 221181870,
+  "name": "Procesos de PLD",
+  "description": null,
+  "columns": [{
+    "id": "name",
+    "title": "Name",
+    "type": "name",
+    "width": 523.005682
+  }, {
+    "title": "Creator",
+    "type": "multiple-person",
+    "id": "person"
+  }, {
+    "type": "multiple-person",
+    "title": "Owner",
+    "id": "people"
+  }, {
+    "title": "Status",
+    "type": "color",
+    "labels": {
+      "0": "Working on it",
+      "1": "Done",
+      "2": "Stuck"
+    },
+    "id": "status",
+    "labels_positions_v2": {
+      "0": 0,
+      "1": 2,
+      "2": 1,
+      "5": 3
+    }
+  }, {
+    "type": "date",
+    "title": "Expected completion",
+    "id": "date4"
+  }],
+  "board_kind": "public",
+  "groups": [{
+    "title": "Otros",
+    "color": "#FFCB00",
+    "id": "new_group",
+    "board_id": 221181870
+  }, {
+    "title": "Nuevo onboarding de links PLD",
+    "id": "topics",
+    "color": "#579bfc",
+    "board_id": 221181870
+  }, {
+    "title": "Nueva capacitaci\u00f3n PLD",
+    "color": "#a25ddc",
+    "id": "group_title",
+    "board_id": 221181870
+  }],
+  "created_at": "2019-04-24T16:23:43Z",
+  "updated_at": "2019-05-20T19:59:04Z"
+}, {
+  "url": "https://gonebula.monday.com/boards/221246673",
+  "id": 221246673,
+  "name": "Comisiones de Links",
+  "description": null,
+  "columns": [{
+    "id": "name",
+    "title": "Name",
+    "type": "name",
+    "width": 523.005682
+  }, {
+    "title": "Creator",
+    "type": "multiple-person",
+    "id": "person"
+  }, {
+    "type": "multiple-person",
+    "title": "Owner",
+    "id": "people"
+  }, {
+    "title": "Status",
+    "type": "color",
+    "labels": {
+      "0": "Working on it",
+      "1": "Done",
+      "2": "Stuck",
+      "7": "Pending",
+      "19": "Stand-by"
+    },
+    "id": "status",
+    "labels_positions_v2": {
+      "0": 0,
+      "1": 2,
+      "2": 1,
+      "5": 3,
+      "7": 4,
+      "19": 5
+    }
+  }, {
+    "type": "date",
+    "title": "Expected completion",
+    "id": "date4"
+  }],
+  "board_kind": "public",
+  "groups": [{
+    "title": "David",
+    "color": "#fdab3d",
+    "id": "david",
+    "deleted": true,
+    "archived": false,
+    "board_id": 221246673
+  }, {
+    "title": "Comisiones de Links",
+    "id": "topics",
+    "color": "#579bfc",
+    "board_id": 221246673
+  }, {
+    "title": "Group Title",
+    "color": "#a25ddc",
+    "id": "group_title",
+    "deleted": true,
+    "archived": false,
+    "board_id": 221246673
+  }],
+  "created_at": "2019-04-24T17:58:41Z",
+  "updated_at": "2019-05-08T18:26:00Z"
+}, {
+  "url": "https://gonebula.monday.com/boards/221403011",
+  "id": 221403011,
+  "name": "Pato",
+  "description": "Pendientes David Ib\u00e1\u00f1ez",
+  "columns": [{
+    "id": "name",
+    "title": "Name",
+    "type": "name",
+    "width": 523.005682
+  }, {
+    "title": "Responsable 1",
+    "type": "multiple-person",
+    "id": "person"
+  }, {
+    "type": "multiple-person",
+    "title": "Responsable 2",
+    "id": "people"
+  }, {
+    "title": "Status",
+    "type": "color",
+    "labels": {
+      "0": "Trabajando",
+      "1": "Terminado",
+      "2": "Atorado",
+      "3": "Pendiente",
+      "4": "Solicitado",
+      "5": ""
+    },
+    "id": "status",
+    "labels_positions_v2": {
+      "0": 0,
+      "1": 2,
+      "2": 1,
+      "3": 4,
+      "4": 5,
+      "5": 3
+    }
+  }, {
+    "type": "date",
+    "title": "Date",
+    "id": "date4"
+  }],
+  "board_kind": "public",
+  "groups": [{
+    "title": "Cobranza",
+    "color": "#fdab3d",
+    "id": "new_group14",
+    "board_id": 221403011
+  }, {
+    "title": "Domiciliaci\u00f3n",
+    "color": "#0086c0",
+    "id": "new_group69",
+    "board_id": 221403011
+  }, {
+    "title": "Peticiones sistema",
+    "color": "#037f4c",
+    "id": "new_group",
+    "board_id": 221403011
+  }, {
+    "title": "An\u00e1lisis de cr\u00e9dito",
+    "color": "#e2445c",
+    "id": "an_lisis_de_cr_dito",
+    "board_id": 221403011
+  }, {
+    "title": "Buro de cr\u00e9dito",
+    "color": "#a25ddc",
+    "id": "group_title",
+    "board_id": 221403011
+  }],
+  "created_at": "2019-04-24T22:40:24Z",
+  "updated_at": "2019-05-15T15:57:47Z"
+}, {
+  "url": "https://gonebula.monday.com/boards/222734436",
+  "id": 222734436,
+  "name": "Contabilidad de cartera en N\u00e9bula",
+  "description": "Desarrollar nuestro propio sistema de contabilidad de cartera de acuerdo a reglas para SOFOMES reguladas",
+  "columns": [{
+    "id": "name",
+    "title": "Name",
+    "type": "name",
+    "width": 523.005682
+  }, {
+    "title": "Solicitante",
+    "type": "multiple-person",
+    "id": "person"
+  }, {
+    "type": "multiple-person",
+    "title": "Encargado",
+    "id": "people"
+  }, {
+    "title": "Estatus",
+    "type": "color",
+    "labels": {
+      "0": "Trabajando",
+      "1": "Terminado",
+      "2": "Atorado",
+      "3": "Pendiente",
+      "5": ""
+    },
+    "id": "status",
+    "labels_positions_v2": {
+      "0": 0,
+      "1": 2,
+      "2": 1,
+      "3": 3,
+      "5": 4
+    }
+  }, {
+    "type": "date",
+    "title": "Fecha de entrega",
+    "id": "date4"
+  }],
+  "board_kind": "public",
+  "groups": [{
+    "title": "P\u00f3lizas contables",
+    "id": "topics",
+    "color": "#579bfc",
+    "board_id": 222734436
+  }, {
+    "title": "Group Title",
+    "color": "#a25ddc",
+    "id": "group_title",
+    "deleted": true,
+    "archived": false,
+    "board_id": 222734436
+  }],
+  "created_at": "2019-04-27T13:36:21Z",
+  "updated_at": "2019-04-27T13:57:36Z"
+}, {
+  "url": "https://gonebula.monday.com/boards/223460886",
+  "id": 223460886,
+  "name": "Mariana",
+  "description": null,
+  "columns": [{
+    "id": "name",
+    "title": "Name",
+    "type": "name",
+    "width": 625.005682
+  }, {
+    "title": "Persona",
+    "type": "multiple-person",
+    "id": "person",
+    "width": 167
+  }, {
+    "title": "Estado",
+    "type": "color",
+    "labels": {
+      "0": "En Proceso",
+      "1": "Listo",
+      "2": "Estancado",
+      "7": "",
+      "12": "",
+      "14": ""
+    },
+    "id": "status",
+    "labels_positions_v2": {
+      "0": 0,
+      "1": 2,
+      "2": 1,
+      "5": 6,
+      "7": 3,
+      "12": 4,
+      "14": 5
+    },
+    "width": 195
+  }],
+  "board_kind": "public",
+  "groups": [{
+    "title": "Contabilidad Cartera",
+    "id": "topics",
+    "color": "#579bfc",
+    "board_id": 223460886
+  }, {
+    "title": "Bancos",
+    "color": "#a25ddc",
+    "id": "group_title",
+    "board_id": 223460886
+  }],
+  "created_at": "2019-04-29T14:47:53Z",
+  "updated_at": "2019-05-20T21:44:47Z"
+}, {
+  "url": "https://gonebula.monday.com/boards/223527655",
+  "id": 223527655,
+  "name": "Elena",
+  "description": null,
+  "columns": [{
+    "id": "name",
+    "title": "Name",
+    "type": "name",
+    "width": 625.005682
+  }, {
+    "title": "Persona",
+    "type": "multiple-person",
+    "id": "person",
+    "width": 167
+  }, {
+    "title": "Estado",
+    "type": "color",
+    "labels": {
+      "0": "En Proceso",
+      "1": "Listo",
+      "2": "Estancado",
+      "7": "",
+      "12": "",
+      "14": ""
+    },
+    "id": "status",
+    "labels_positions_v2": {
+      "0": 0,
+      "1": 2,
+      "2": 1,
+      "5": 6,
+      "7": 3,
+      "12": 4,
+      "14": 5
+    },
+    "width": 195
+  }, {
+    "type": "date",
+    "title": "Date",
+    "id": "date"
+  }],
+  "board_kind": "public",
+  "groups": [{
+    "title": "Tareas diarias",
+    "id": "topics",
+    "color": "#579bfc",
+    "board_id": 223527655
+  }, {
+    "title": "T\u00edtulo del Grupo",
+    "color": "#a25ddc",
+    "id": "group_title",
+    "board_id": 223527655
+  }],
+  "created_at": "2019-04-29T15:46:58Z",
+  "updated_at": "2019-05-22T21:48:04Z"
+}, {
+  "url": "https://gonebula.monday.com/boards/227349776",
+  "id": 227349776,
+  "name": "Miguel",
+  "description": null,
+  "columns": [{
+    "id": "name",
+    "title": "Name",
+    "type": "name",
+    "width": 523.005682
+  }, {
+    "title": "Person",
+    "type": "multiple-person",
+    "id": "person"
+  }, {
+    "title": "Status",
+    "type": "color",
+    "labels": {
+      "0": "Working on it",
+      "1": "Done",
+      "2": "Stuck"
+    },
+    "id": "status",
+    "labels_positions_v2": {
+      "0": 0,
+      "1": 2,
+      "2": 1,
+      "5": 3
+    }
+  }, {
+    "title": "Tags",
+    "type": "tag",
+    "id": "tags"
+  }, {
+    "type": "date",
+    "title": "Date",
+    "id": "date4"
+  }],
+  "board_kind": "public",
+  "groups": [{
+    "title": "Group Title",
+    "id": "topics",
+    "color": "#579bfc",
+    "board_id": 227349776
+  }, {
+    "title": "Group Title",
+    "color": "#a25ddc",
+    "id": "group_title",
+    "deleted": true,
+    "archived": false,
+    "board_id": 227349776
+  }],
+  "created_at": "2019-05-06T15:10:55Z",
+  "updated_at": "2019-05-17T20:38:06Z"
+}]
