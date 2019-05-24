@@ -5,6 +5,10 @@ module MondayRuby
     attr_reader :id, :url, :created_at, :updated_at
 
     def initialize(args)
+      load_from!(args)
+    end
+
+    def load_from!(args)
       @id         = args['id']
       @url        = args['url']
       @created_at = args['created_at']

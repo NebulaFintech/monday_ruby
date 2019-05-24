@@ -8,6 +8,10 @@ module MondayRuby
                 :board_kind, :groups
 
     def initialize(args = {})
+      load_from!(args)
+    end
+
+    def load_from!(args)
       args         = args.with_indifferent_access
       @name        = args['name']
       @description = args.fetch('description', '')
@@ -15,6 +19,11 @@ module MondayRuby
       @board_kind  = args.fetch('board_kind', 'public')
       @groups      = args.fetch('groups', [])
       super(args)
+    end
+
+    def create_nested!(params = {})
+      create(params)
+      # TODO: create nested objs: pulses, columns and groups
     end
 
     def columns=(columns)

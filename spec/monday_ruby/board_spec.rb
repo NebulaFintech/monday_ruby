@@ -22,6 +22,6 @@ RSpec.describe MondayRuby::Board do
     board.name = 'Cool Board!'
     board.description = 'Board created with MondayRuby'
     board.columns = [{ title: 'name', type: 'name' }, { title: 'Responsable', type: 'person' }]
-    board.create(user_id: configuration['user_id'] || 123)
+    board.create!(user_id: configuration['user_id'] || 123)
   end
 end
