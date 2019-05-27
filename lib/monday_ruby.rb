@@ -7,6 +7,7 @@ require 'monday_ruby/resource'
 require 'monday_ruby/board'
 require 'monday_ruby/user'
 require 'monday_ruby/column'
+require 'monday_ruby/pulse'
 require 'monday_ruby/utils'
 
 module MondayRuby

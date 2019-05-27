@@ -19,6 +19,7 @@ module MondayRuby
     end
 
     def request(resource_url, http_method, params = {})
+      params = params.delete_if { |k, v| v.nil? }
       set_headers_for(connection)
       response = connection.method(http_method).call do |request|
         request.url self.class.join_url(api_base, resource_url + '.json')

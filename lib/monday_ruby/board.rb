@@ -5,7 +5,7 @@ module MondayRuby
     include Mixins::Create
 
     attr_accessor :name, :description, :columns,
-                  :board_kind, :groups
+                  :board_kind, :groups, :pulses
 
     def initialize(args = {})
       @groups      = []
@@ -20,14 +20,18 @@ module MondayRuby
       @board_kind  = args.fetch('board_kind', 'public')
       @groups      = args.fetch('groups', [])
       columns      = args.fetch('columns', [])
+      pulses       = args.fetch('pulses', [])
       super(args)
     end
 
     def create_with_nested!(params = {})
       unpersisted_columns = @columns.select{ |c| c.id.blank? }
+      unpersisted_pulses = @pulses.select{ |p| p.id.blank? }
       create!(params)
-      # TODO: create nested objs: pulses, columns and groups
-      create_from_nested_obj_array!('columns', unpersisted_columns)
+
+      create_from_nested_obj_array!('columns', unpersisted_columns, params)
+      # Yuck!
+      pulses = create_nested_obj_array!(MondayRuby::Pulse, unpersisted_pulses, params)
     end
 
     def to_hash
@@ -44,6 +48,10 @@ module MondayRuby
       set_columns(columns)
     end
 
+    def pulses=(pulses)
+      set_pulses(pulses)
+    end
+
     private
 
     def set_columns(columns)
@@ -54,6 +62,18 @@ module MondayRuby
           MondayRuby::Column.new(column)
         else
           raise ArgumentError, 'Invalid columns types. Valid types are MondayRuby::Column or hash' 
+        end
+      end.compact
+    end
+
+    def set_pulses(pulses)
+      @pulses = pulses.map do |pulse|
+        if pulse.is_a?(MondayRuby::Pulse)
+          pulse
+        elsif pulse.is_a?(Hash)
+          MondayRuby::Pulse.new(pulse)
+        else
+          raise ArgumentError, 'Invalid pulses types. Valid types are MondayRuby::Pulse or hash' 
         end
       end.compact
     end
