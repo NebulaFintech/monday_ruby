@@ -1,0 +1,24 @@
+{
+  "url": "https://gonebula.monday.com/boards/240280208",
+  "id": 240280208,
+  "name": "Cool Board!",
+  "description": "Board created with MondayRuby",
+  "columns": [{
+    "id": "name",
+    "title": "Name",
+    "type": "name"
+  }, {
+    "title": "Responsable",
+    "type": "person",
+    "id": "responsable"
+  }],
+  "board_kind": "public",
+  "groups": [{
+    "title": "Group Title",
+    "id": "topics",
+    "color": "#037f4c",
+    "board_id": 240280208
+  }],
+  "created_at": "2019-05-27T15:46:17Z",
+  "updated_at": "2019-05-27T15:46:18Z"
+}

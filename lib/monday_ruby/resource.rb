@@ -15,12 +15,20 @@ module MondayRuby
       @updated_at = args['updated_at']
     end
 
+    def self.simple_name
+      name.demodulize.to_s.camelize(:lower)
+    end
+
+    def simple_name
+      self.class.name.demodulize.to_s.camelize(:lower)
+    end
+
     def self.resource_url
-      name.demodulize.to_s.camelize(:lower).pluralize
+      simple_name.pluralize
     end
 
     def resource_url
-      self.class.name.demodulize.to_s.camelize(:lower).pluralize
+      simple_name.pluralize
     end
 
     def to_hash

@@ -1,17 +1,18 @@
 module MondayRuby
   class Column
-    VALID_TYPES = ['name', 'tag', 'person', 'color', 'date', 'timerange', 'dependency', 'multiple-person'].freeze
-    attr_reader :title, :type, :width
+    VALID_TYPES = ['name', 'status', 'person', 'text', 'date', 'number', 'timeline'].freeze
+    attr_reader :id, :title, :type
     def initialize(args = {})
       args   = args.with_indifferent_access
+      @id = args['id']
       @title = args['title']
       @type  = args['type']
-      @width = 523.005682 if args['type'] == 'name'
       validate_type
     end
 
     def to_hash
       {
+        id: id,
         title: title,
         type: type
       }
