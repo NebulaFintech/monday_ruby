@@ -3,7 +3,15 @@
   "id": 240280208,
   "name": "Cool Board!",
   "description": "Board created with MondayRuby",
-  "columns": [],
+  "columns": [{
+    "id": "name",
+    "title": "Name",
+    "type": "name"
+  }, {
+    "title": "Responsable",
+    "type": "person",
+    "id": "responsable"
+  }],
   "board_kind": "public",
   "groups": [{
     "title": "Group Title",

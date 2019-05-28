@@ -2,6 +2,7 @@
 
 module MondayRuby
   class Resource
+    include Mixins::Create
     attr_reader :id, :url, :created_at, :updated_at
 
     def initialize(args)

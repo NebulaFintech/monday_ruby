@@ -1,25 +1,25 @@
 module MondayRuby
-  class Pulse < Resource
+  class Group < Resource
     include Mixins::Create
-    attr_reader :id, :name, :board_id
 
+    attr_reader :id, :title, :board_id
     def initialize(args = {}, board_id = nil)
       args      = args.with_indifferent_access
       @id       = args['id']
-      @name     = args['name']
+      @title    = args['title']
       @board_id = board_id
     end
 
     def resource_url
       raise ArgumentError, 'board_id is not present!' unless board_id
 
-      "boards/#{board_id}/pulses"
+      "boards/#{board_id}/groups"
     end
 
     def create!(params = {})
       if id.blank?
-        new_pulse = custom_create(resource_url, { pulse: to_hash }.merge(params), MondayRuby::Pulse)
-        @id = new_pulse.id
+        new_group = custom_create(resource_url, to_hash.merge(params), MondayRuby::Group)
+        @id = new_group.id
       end
       self
     end
@@ -27,7 +27,7 @@ module MondayRuby
     def to_hash
       {
         id: id,
-        name: name
+        title: title
       }
     end
   end
