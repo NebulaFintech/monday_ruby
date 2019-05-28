@@ -26,18 +26,18 @@ RSpec.describe MondayRuby::Board do
     board.name = 'CRM de clientes'
     board.description = 'Administrador de funnels de clientes'
 
-    allow_any_instance_of(MondayRuby::Requestor).to receive(:request).and_return(board_response)
+    # allow_any_instance_of(MondayRuby::Requestor).to receive(:request).and_return(board_response)
     board.create!(user_id: configuration['user_id'] || 123)
     expect(board).to be_a(MondayRuby::Board)
 
-    allow_any_instance_of(MondayRuby::Requestor).to receive(:request).and_return(group_response)
+    # allow_any_instance_of(MondayRuby::Requestor).to receive(:request).and_return(group_response)
     board.groups = [{ title: 'Funnels' }]
     expect(board.groups).to be_a(Array)
     expect(board.groups.last).to be_a(MondayRuby::Group)
     expect(board.groups.last.title).to eq('Funnels')
     expect(board.groups.last.id).to be_present
 
-    allow_any_instance_of(MondayRuby::Requestor).to receive(:request).and_return(column_response)
+    # allow_any_instance_of(MondayRuby::Requestor).to receive(:request).and_return(column_response)
     board.columns = [
       { title: 'Responsable', type: 'person' },
       { title: 'Estatus', type: 'status', labels: {
@@ -60,11 +60,13 @@ RSpec.describe MondayRuby::Board do
     expect(board.columns.last.title).to eq('Estatus')
     expect(board.columns.last.id).to be_present
 
-    allow_any_instance_of(MondayRuby::Requestor).to receive(:request).and_return(pulse_response)
+    # allow_any_instance_of(MondayRuby::Requestor).to receive(:request).and_return(pulse_response)
     board.pulses = [{ name: 'Cliente Antonio González López' }]
     expect(board.pulses).to be_a(Array)
     expect(board.pulses.last).to be_a(MondayRuby::Pulse)
     expect(board.pulses.last.name).to eq('Cliente Antonio González López')
     expect(board.pulses.last.id).to be_present
+
+    MondayRuby::Note.new(project_id: board.pulses.first.id, title: 'Datos', content: 'https://musca.gonebula.io/customers/102').create!
   end
 end
