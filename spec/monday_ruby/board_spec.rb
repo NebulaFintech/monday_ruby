@@ -38,10 +38,26 @@ RSpec.describe MondayRuby::Board do
     expect(board.groups.last.id).to be_present
 
     allow_any_instance_of(MondayRuby::Requestor).to receive(:request).and_return(column_response)
-    board.columns = [{ title: 'Responsable', type: 'person' }]
+    board.columns = [
+      { title: 'Responsable', type: 'person' },
+      { title: 'Estatus', type: 'status', labels: {
+        '0' => 'invite_sent',
+        '1' => 'invite_expired',
+        '2' => 'prospect_preapproved',
+        '3' => 'prospect_declined',
+        '4' => 'preapproval_expired',
+        '5' => 'application_submitted',
+        '6' => 'application_rejected',
+        '7' => 'application_authorized',
+        '8' => 'offer_expired',
+        '9' => 'contract_signed',
+        '10' => 'contract_canceled',
+        '11' => 'loan_disbursed'
+      }}
+    ]
     expect(board.columns).to be_a(Array)
     expect(board.columns.last).to be_a(MondayRuby::Column)
-    expect(board.columns.last.title).to eq('Responsable')
+    expect(board.columns.last.title).to eq('Estatus')
     expect(board.columns.last.id).to be_present
 
     allow_any_instance_of(MondayRuby::Requestor).to receive(:request).and_return(pulse_response)

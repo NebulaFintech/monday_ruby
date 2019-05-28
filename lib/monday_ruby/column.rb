@@ -2,13 +2,16 @@ module MondayRuby
   class Column
     include Mixins::Create
 
-    attr_reader :id, :title, :type, :board_id
+    # types: status, person, text, date, numbers or timeline
+
+    attr_reader :id, :title, :type, :board_id, :labels
 
     def initialize(args = {}, board_id = nil)
       args      = args.with_indifferent_access
       @id       = args['id']
       @title    = args['title']
       @type     = args['type']
+      @labels   = args.fetch('labels', [])
       @board_id = board_id
     end
 
@@ -27,11 +30,13 @@ module MondayRuby
     end
 
     def to_hash
-      {
+      h = {
         id: id,
         title: title,
         type: type
       }
+      h.merge!(labels: labels) if labels.present?
+      h
     end
   end
 end

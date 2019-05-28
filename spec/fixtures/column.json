@@ -1,8 +1,8 @@
 {
-  "url": "https://gonebula.monday.com/boards/240280208",
-  "id": 240280208,
-  "name": "Cool Board!",
-  "description": "Board created with MondayRuby",
+  "url": "https://gonebula.monday.com/boards/240962109",
+  "id": 240962109,
+  "name": "CRM de clientes",
+  "description": "Administrador de funnels de clientes",
   "columns": [{
     "id": "name",
     "title": "Name",
@@ -11,14 +11,37 @@
     "title": "Responsable",
     "type": "person",
     "id": "responsable"
+  }, {
+    "title": "Estatus",
+    "type": "color",
+    "labels": {
+      "0": "invite_sent",
+      "1": "invite_expired",
+      "10": "contract_canceled",
+      "11": "loan_disbursed",
+      "2": "prospect_preapproved",
+      "3": "prospect_declined",
+      "4": "preapproval_expired",
+      "5": "application_submitted",
+      "6": "application_rejected",
+      "7": "application_authorized",
+      "8": "offer_expired",
+      "9": "contract_signed"
+    },
+    "id": "estatus"
   }],
   "board_kind": "public",
   "groups": [{
+    "title": "Funnels",
+    "color": "#fdab3d",
+    "id": "funnels",
+    "board_id": 240962109
+  }, {
     "title": "Group Title",
     "id": "topics",
     "color": "#037f4c",
-    "board_id": 240280208
+    "board_id": 240962109
   }],
-  "created_at": "2019-05-27T15:46:17Z",
-  "updated_at": "2019-05-27T15:46:18Z"
+  "created_at": "2019-05-28T15:12:37Z",
+  "updated_at": "2019-05-28T15:12:39Z"
 }
